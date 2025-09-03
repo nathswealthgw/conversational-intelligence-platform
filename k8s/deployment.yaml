@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cip-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: cip-backend
+  template:
+    metadata:
+      labels:
+        app: cip-backend
+    spec:
+      containers:
+        - name: api
+          image: cip-backend:latest
+          ports:
+            - containerPort: 8000
+          envFrom:
+            - secretRef:
+                name: cip-secrets
+          readinessProbe:
+            httpGet:
+              path: /api/v1/health
+              port: 8000
+            initialDelaySeconds: 5
+            periodSeconds: 10
