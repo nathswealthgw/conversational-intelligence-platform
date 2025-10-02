@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conversational Intelligence Platform — Live Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="demo-banner">
+      <span>Demo Environment — This is a non-production showcase of the Conversational Intelligence Platform.</span>
+    </header>
+
+    <main class="page">
+      <section class="hero">
+        <div class="hero-text">
+          <p class="eyebrow">LLM-Driven Virtual Analyst</p>
+          <h1>Conversational Intelligence Platform</h1>
+          <p class="subtitle">
+            Explore a retrieval-augmented assistant that surfaces grounded answers across enterprise knowledge.
+            This demo simulates ingestion, semantic search, and response synthesis in real time.
+          </p>
+          <div class="hero-actions">
+            <button id="runDemo" class="primary">Run Live Demo</button>
+            <button id="resetDemo" class="ghost">Reset</button>
+          </div>
+          <div class="status" id="status">System ready. Awaiting demo run.</div>
+        </div>
+        <div class="hero-panel">
+          <div class="orb"></div>
+          <div class="spark">
+            <div class="spark-ring"></div>
+            <div class="spark-core"></div>
+            <div class="spark-node"></div>
+            <div class="spark-node"></div>
+            <div class="spark-node"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="pipeline">
+        <h2>Live Retrieval Pipeline</h2>
+        <div class="pipeline-grid">
+          <article class="card">
+            <h3>1. Ingestion</h3>
+            <p>50K+ policy, finance, and product documents prepared for embedding.</p>
+            <div class="meter">
+              <div class="meter-fill" id="ingestMeter"></div>
+            </div>
+          </article>
+          <article class="card">
+            <h3>2. Vector Search</h3>
+            <p>FAISS-powered semantic retrieval executes in sub-second latency.</p>
+            <div class="meter">
+              <div class="meter-fill" id="searchMeter"></div>
+            </div>
+          </article>
+          <article class="card">
+            <h3>3. Grounded Response</h3>
+            <p>LLM response synthesis with source citations and confidence scoring.</p>
+            <div class="meter">
+              <div class="meter-fill" id="responseMeter"></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="chat">
+        <h2>Virtual Analyst Preview</h2>
+        <div class="chat-window" id="chatWindow">
+          <div class="chat-bubble system">Welcome. Press “Run Live Demo” to simulate an analyst response.</div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="demo-banner footer">
+      <span>Demo Environment — Results are simulated for portfolio and evaluation purposes only.</span>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
