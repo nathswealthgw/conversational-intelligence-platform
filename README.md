@@ -15,7 +15,7 @@
 ---
 
 ## Problem Statement
-Enterprise teams drown in unstructured documentation across HR policies, finance memos, product specs, and customer research. Analysts need an AI assistant that can answer questions with **strong contextual grounding** and **sub-second response times** while remaining audit-ready for compliance.
+Enterprise teams drown in unstructured documentation across HR policies, finance memos, product specs, and customer research. Analysts need an AI assistant that can provide answers to questions with **strong contextual grounding** and **sub-second response times** while remaining audit-ready for compliance.
 
 ## Solution
 This project delivers a retrieval-augmented generation (RAG) platform built on **LangChain + FAISS** with a production-ready FastAPI backend and React frontend. It ingests tens of thousands of enterprise documents, generates semantic embeddings, and serves grounded responses with citations.
