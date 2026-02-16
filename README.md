@@ -6,7 +6,7 @@
 
 ---
 
-🔗 **[Live Demo](https://nathswealthgw.github.io/2conversational-intelligence-platform/)**
+🔗 **[Live Demo](https://nathswealthgw.github.io/conversational-intelligence-platform/)**
 
 </div>
 
@@ -106,7 +106,8 @@ curl -X POST http://localhost:8000/api/v1/chat/ask \
 conversational-intelligence-platform/
 ├── .github/
 │   └── workflows/
-│       └── ci.yml
+│       ├── ci.yml
+│       └── pages.yml
 ├── backend/
 │   ├── app/
 │   │   ├── main.py
