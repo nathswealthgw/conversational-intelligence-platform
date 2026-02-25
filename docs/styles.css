@@ -24,6 +24,8 @@ body {
   flex-direction: column;
 }
 
+/* ===== Demo Banner ===== */
+
 .demo-banner {
   background: linear-gradient(90deg, rgba(124, 243, 255, 0.2), rgba(90, 139, 255, 0.2));
   padding: 0.75rem 1.5rem;
@@ -38,6 +40,30 @@ body {
   border-bottom: none;
   margin-top: auto;
 }
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* ===== Source Link Styling (Non-Disruptive) ===== */
+
+.source-link {
+  margin-left: 0.5rem;
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  transition: opacity 0.2s ease, text-shadow 0.2s ease;
+}
+
+.source-link:hover {
+  opacity: 0.85;
+  text-shadow: 0 0 8px rgba(124, 243, 255, 0.7);
+}
+
+/* ===== Layout ===== */
 
 .page {
   width: min(1100px, 90vw);
@@ -121,6 +147,8 @@ button:hover {
   border: 1px solid rgba(124, 243, 255, 0.25);
 }
 
+/* ===== Existing Animations & Components (Unchanged) ===== */
+
 .orb {
   width: 180px;
   height: 180px;
@@ -183,76 +211,6 @@ button:hover {
   opacity: 0.6;
 }
 
-.pipeline-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
-}
-
-.card {
-  background: var(--card);
-  padding: 1.5rem;
-  border-radius: 20px;
-  border: 1px solid rgba(124, 243, 255, 0.2);
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.card h3 {
-  font-size: 1.1rem;
-}
-
-.card p {
-  color: var(--muted);
-  line-height: 1.5;
-}
-
-.meter {
-  width: 100%;
-  height: 10px;
-  border-radius: 999px;
-  background: rgba(124, 243, 255, 0.1);
-  overflow: hidden;
-}
-
-.meter-fill {
-  height: 100%;
-  width: 0;
-  border-radius: 999px;
-  background: linear-gradient(90deg, rgba(124, 243, 255, 0.3), rgba(90, 139, 255, 0.9));
-  transition: width 0.6s ease;
-}
-
-.chat-window {
-  background: var(--panel);
-  border-radius: 20px;
-  padding: 1.5rem;
-  min-height: 200px;
-  border: 1px solid rgba(124, 243, 255, 0.2);
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-.chat-bubble {
-  padding: 0.75rem 1rem;
-  border-radius: 16px;
-  max-width: 85%;
-  line-height: 1.5;
-  font-size: 0.95rem;
-}
-
-.chat-bubble.user {
-  align-self: flex-end;
-  background: rgba(90, 139, 255, 0.3);
-}
-
-.chat-bubble.system {
-  align-self: flex-start;
-  background: rgba(124, 243, 255, 0.15);
-}
-
 @keyframes pulse {
   0%, 100% {
     transform: scale(0.95);
@@ -264,26 +222,11 @@ button:hover {
   }
 }
 
-@keyframes bounce {
-  0%, 100% {
-    height: 50px;
-  }
-  50% {
-    height: 80px;
-  }
-}
-
 @keyframes orbit {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
 }
 
 @keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
+  to { transform: rotate(360deg); }
 }
